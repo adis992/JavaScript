@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title >Test JS 01</title>
+    
+            
+            <style>
+                    /* postavljamo sve elemente u block i poravnavamo ih s lijeve strane */
+           
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin: 0 auto;  /* centriramo formu */
+                width: 200px;   /* podešavamo širinu forme */
+            }
+            l1, l2, l3, button {
+                display: block;
+            }
+            #poluprecnik {
+                text-align: center;
+            }
+            #visina {
+                text-align: center;
+            }
+
+            
+            header {
+                color: brown;
+                text-align: center;
+                margin: 0 auto;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>RACUNANJE ZAPREMINE VALJKA</h2>
+    </header>
+    <form id="forma">
+        <label class="l1">Poluprečnik osnove valjka (r):</label>
+        <input type="number" id="poluprecnik">
+        <br>
+        <label class="l2">Visina valjka (H):</label>
+        <input type="number" id="visina">
+        <br>
+        <button class="button" type="submit">Izračunaj zapreminu valjka</button>
+        <br>
+        <label class="l3">Rezultat: </label>
+        
+      </form>
+      
+      
+      <script>
+        const forma = document.getElementById('forma');
+        const l3 = document.querySelector('.l3');  // pristupamo label sa imenom "l3"
+      
+        // funkcija za izračunavanje zapremine valjka
+        function izracunajZapreminuValjka(poluprecnik, visina) {
+          const PI = 3.14;  // konstanta Pi
+          const zapremina = poluprecnik * poluprecnik * PI * visina;
+          return zapremina;
+        }
+      
+        forma.addEventListener('submit', e => {
+          e.preventDefault();  // sprečavamo da se forma submituje
+      
+          // citamo vrijednosti poluprečnika i visine valjka iz forme
+          const poluprecnik = parseFloat(forma.elements.poluprecnik.value);
+          const visina = parseFloat(forma.elements.visina.value);
+      
+          // racunamo zapreminu valjka
+          const zapremina = izracunajZapreminuValjka(poluprecnik, visina);
+      
+          // ispisujemo rezultat u label sa id oznakom l3
+          l3.textContent = `Rezultat: ${zapremina}`;
+        });
+      </script>
+</body>
+</html>

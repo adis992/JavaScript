@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test JS 01</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>RACUNANJE ZAPREMINE VALJKA</h2>
+    </header>
+      
+      <script>
+        // funkcija za izračunavanje zapremine valjka
+        function izracunajZapreminuValjka(poluprecnik, visina) {
+          const PI = 3.14;  // konstanta Pi
+          const zapremina = poluprecnik * poluprecnik * PI * visina;
+          return zapremina;
+        }
+      
+        // koristimo prompt za unos poluprečnika valjka
+        const poluprecnik = prompt('Unesite poluprečnik valjka:');
+      
+        // koristimo prompt za unos visine valjka
+        const visina = prompt('Unesite visinu valjka:');
+      
+        // računamo zapreminu valjka
+        const zapremina = izracunajZapreminuValjka(poluprecnik, visina);
+      
+        // ispisujemo unijete podatke i rezultat
+        document.write(`<p>Poluprečnik valjka: ${poluprecnik}</p>`);
+        document.write(`<p>Visina valjka: ${visina}</p>`);
+        document.write(`<p>Rezultat: ${zapremina}</p>`);
+      
+        // dodajemo dugme za osvježavanje stranice
+        document.write('<button onclick="location.reload()">Osvjezi stranicu</button>');
+      </script>
+</body>
+</html>
