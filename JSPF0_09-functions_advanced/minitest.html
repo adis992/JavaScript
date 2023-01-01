@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test ja kreirao</title>
+</head>
+<body>
+    <script>
+        let numberA = prompt ("ukucajte broj a")
+        let numberB = prompt ("ukucajte broj b")
+        // promt funkcije vracaju kao odg textualne tipove i potrebno ih je parsirati sa parseInt da prebaci u broj
+        let result = sum (numberA, numberB);
+        alert("rezultat je:" + result);
+        function sum (a, b) {  
+            return parseInt(a) + parseInt (b);
+        }
+        
+    </script>
+</body>
+</html>

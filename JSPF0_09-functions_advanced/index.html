@@ -10,13 +10,42 @@
     <body>
 
         <script>
+            /*
+            var a = 5;
+            var b = 10;
 
-            (function () {
-                var number = 5;
-                console.log(number);
-            })();
+            function calculateReactArea (a, b) {
+                var c= a*b;
+                a = 30;
+                return c;
+            }
+            var result = calculateReactArea(a,b);
+            console.log("Rezultat je:" + result);
+            console.log("a =" +a); */
 
-            console.log(number);
+            //na ovaj nacin iznad program sve odradi sam ali a promjenjivu izracuna ali je ne moze ispisat a zto cemo rijesiti na sljedeci nacin ispod
+
+
+
+
+            function calculateRectArea(theObject) {
+                var result = theObject.number_a * theObject.number_b;
+                theObject.number_a = 30;
+                return result;
+            }
+            var rectangle = { number_a: 5, number_b: 10 };
+            //recentangle objektni literal za kreiranje objekta   u prevodu pravougaonik
+
+            var result = calculateRectArea(rectangle);
+
+            document.writeln;('<pre>');
+            document.writeln('Result is: ' + result);
+            document.writeln('a = ' + rectangle.number_a);
+            // u ovom primjeru smo vrijednost a i vr. b stavili u jedan objekat /
+            //ako dajemo npr vrijednost a=40 van fukncije to ce vaziti za sve u kodu, ako zelimo samo na neku funk. ubacimo parametar u funkciju 
+
+           
+
 
         </script>
     </body>
