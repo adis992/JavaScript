@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>JavaScript Objects</title>
+    </head>
+
+    <body>
+        <script>
+
+            var subaryLegacy = { make: "Subary", model: "Legacy", weight: 1560, color: "black" };
+
+            console.log(typeof subaryLegacy);
+
+
+            var myCar = new Object();
+            myCar.make = "Subary";
+            myCar.model = "Legacy";
+            myCar.weight = 1560;
+            myCar.color = "black";
+
+            console.log(myCar.make + " " + myCar.model);
+
+            function car(make, model, weight, color) {
+                this.make = make;
+                this.model = model;
+                this.weight = weight;
+                this.color = color;
+            }
+
+            var car1 = new car("Subary", "Legacy", 1563, "black");
+
+            console.log(typeof car1);
+
+
+
+        </script>
+    </body>
+
+</html>
