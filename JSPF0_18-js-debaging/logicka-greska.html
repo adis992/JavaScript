@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //mnogo teze detektovati logicke greske
+        var number_a = prompt("Please enter first number:");
+        var number_b = prompt("Please enter second number:");
+        //rijesenje konvertovanje u brojeve
+        number_a = parseInt(number_a);
+        number_b = parseInt(number_b);
+
+        //najjednostavnije rijesenj je prikazivanje u konzoli primjer ispod nakon svega
+        console.log("Number A value: " + number_a + ". Number A type: " + typeof (number_a));
+        console.log("Number B value: " + number_b + ". Number A type: " + typeof (number_b));
+
+
+        if (number_a > number_b) {
+            alert("Number " + number_a + " is greater then " + number_b);
+
+        } else if (number_b > number_a){  ///ovo smo dodali naknadno da bih rijesili problem kroz debaging
+            alert("Number " + number_b + " is greater then " + number_a);
+        } else {
+            //alert("Number " + number_b + " is greater then " + number_a); //number_a kada bi postavio number c prijavit ce sintaksu gresku
+            //kod iznad je bio prvipostojeci
+            alert("Numbers are equal.");
+        }
+
+        //broj 5 veci od broja 15, skripta radi al ne emituje ono sto ocekujemo i to je logicka greska
+        //
+    </script>
+</body>
+
+</html>

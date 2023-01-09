@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var numbers = [1, 2, 55, 23, 0, 11, 123, -33];
+        numbers.sort (compareNumbers);
+        console.log(numbers.toString());
+        //sa ovom funkcijom ispod poredamo brojeve kako i treba 
+        function compareNumbers (a, b) {      ///kreirali smo funkciju da je proslijedimo kao parametar gornjoj metodi  sort
+            return a - b;    //funkcija sort moze da prihvati 1 fun za sortiranje i mora da ima 2 ulazna parametra i mora da emituje 1 od 3 vrijednosti 
+        }
+
+        //na ovaj nacin jednu funkciju proslijedjujemo drugoj
+    </script>
+</body>
+</html>

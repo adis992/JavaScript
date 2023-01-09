@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+    <script>
+
+        var numberA = parseInt(prompt("Unesite prvi broj za računanje"));
+        if (isNaN(numberA)) {
+        alert('Pogrešan unos za prvi broj, stranica će se osvježiti');
+        location.reload();
+        throw new Error('Pogrešan unos za prvi broj');
+        }
+
+        var numberOperator = prompt("Unesite operaciju računanja");
+        if (typeof numberOperator !== 'string' || (numberOperator !== "+" && numberOperator !== "-" && numberOperator !== "*" && numberOperator !== "/")) {
+        alert('Pogrešan unos za operaciju, stranica će se osvježiti');
+        location.reload();
+        throw new Error('Pogrešan unos za operaciju');
+        }
+
+        var numberB = parseInt(prompt("Unesite drugi broj za računanje"));
+        if (isNaN(numberB)) {
+        alert('Pogrešan unos za drugi broj, stranica će se osvježiti');
+        location.reload();
+        throw new Error('Pogrešan unos za drugi broj');
+        }
+
+        // izvršavanje računanja
+        var rezultat = 0;
+        if (numberOperator === "+") {
+        rezultat = numberA + numberB;
+        } else if (numberOperator === "-") {
+        rezultat = numberA - numberB;
+        } else if (numberOperator === "*") {
+        rezultat = numberA * numberB;
+        } else if (numberOperator === "/") {
+        rezultat = numberA / numberB;
+        }
+
+        // prikaz rezultata
+        alert('Rezultat je: ' + rezultat);
+               
+        
+    </script>
+</body>
+</html>

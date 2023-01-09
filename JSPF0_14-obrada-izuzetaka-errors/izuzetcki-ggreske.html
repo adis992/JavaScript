@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Obrada izuzetaka i errori</title>
+</head>
+<body>
+    <script>
+        //obrada izuzetaka koje nastaju prilikom gresaka
+        //GRESKA je uzrok a izuzetak je posljedica greske
+        var b = 13  //ako postavimo ovu promjenjiu nece doci do promjene izuzetka niti ce se izvrsisi catch naredba
+        try { 
+             console.log ("Value of variable b is:" + b);
+           }   catch (err){       //na ovaj nacin smo obradili izuzetak i sprijecili prekid izvrsavanja koda
+            console.log ("Error name:" + err.name)
+            console.log ("Error massage:" + err.massage)
+           }   finally {   //ovo je blok koji ce se izvrsiti u svakom slucaju i ako dodje i ako ne dodje do pojave izuzetka
+                console.log ("Hello from finally block")
+            }
+
+        
+        console.log ("Hello World");
+
+        //ako program naleti na gresku prekida se cijeli kod onodno naredbe nece biti izvrsene
+    </script>
+</body>
+</html>

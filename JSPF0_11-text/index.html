@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text u js</title>
+</head>
+<body>
+    <script>
+        var x = "ovo je text" //da definisemo tex vrijednost u js
+        console.log(typeof x) //ispisi mi tip varijable x mozemo korisiti "" ili jednostruke i nije ih moguce mijesati
+        // ako imam0  " this is single quote: '.This is double quote: \".";    sa opcijom backslash \ ispisat cemo ono sto zelimo i na taj nacin cemo zbuniti js da ispise i karaktere
+        /*
+        var x= "Hello\nWorld";  na ovaj nacin cemo ispisati hello pa u novom redu world    */
+        /*
+        \t  horizontalni tabulator
+        \r povratak na početak reda
+        */
+        //operatori sabiranja 
+        var x = "Helllo"+ "Wolrd";
+        console.log(x);
+
+        //ovo se najvise koristi kada imamo puno texta i na kraju svako reda ide znak +
+
+        //metoda CONCAT () kao operator sabiranja
+
+        
+
+        //metode nekog objekta toLowerCase() sve u mala slova ili obrnuta metorda u velika slova toUpperCase ()
+        //primjer toga
+        //var x = "VELIKA SLOVA U MALA"
+        //console.log (x.toLocaleLowerCase());
+        //ISTO IMAMO I LENGTH ako nas interesuje koliko borjeva slova ima u texxtu 
+        //ako zelimo koristiti charAT 6 dobijemo slovo pod rednim brojem 6 u textu
+        //SUBSTRING koristimo ako zelimo izolovati dio texta npr u hello world dobit cemo world ako smo pored subrstringa u ispisu console stavili broj 6 jer je double w na tom rednom broju
+        // da smo u substring dodali i broj 6 i 8  dobili bi znaci Wo umjesto world 
+
+        /*
+        var someText = " The indexof() method returns the position of the first occurrence of a specified value in a string.";
+        console.log(someText.indexOf("method"));
+        */
+        //dobit cemo vrijednmost 14 i metoda je uspjesno obavljena....fraza metod pocinje na indexu 14
+        //ako fraza ne postoji indexof vratit ce vrijednost -1
+
+        //var someText = "         Hello World!        ";
+        // console.log (someText.trim());
+
+        //trim opcija trimuje ili brise prazan prosto a mozemo isto napraviti i sad trimStart ili trimEnd
+
+    
+    </script>
+</body>
+</html>

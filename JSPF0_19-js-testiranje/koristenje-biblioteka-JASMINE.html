@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="tests/tests.js"></script>
+    <script>
+        
+        var number_a = prompt("Please enter first number:");
+        var number_b = prompt("Please enter second number:");
+
+        let result = compare(number_a, number_b);
+        switch (result){
+            case 1:
+                alert("Number " + number_a + " is greater then " + number_b);  
+                break;
+            case -1:
+                alert("Number " + number_b + " is greater then " + number_a);
+                break;
+            case 0:
+                alert("Numbers are equal.");
+                break;
+
+        }
+ 
+    </script>
+</body>
+
+</html>

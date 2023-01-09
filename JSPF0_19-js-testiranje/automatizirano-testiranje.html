@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //mnogo teze detektovati logicke greske
+        var number_a = prompt("Please enter first number:");
+        var number_b = prompt("Please enter second number:");
+
+        //logika za poziv donje funkcije
+
+        let result = compare(number_a, number_b);
+
+        switch (result){
+            case 1:
+                alert("Number " + number_a + " is greater then " + number_b);  
+                break;
+            case -1:
+                alert("Number " + number_b + " is greater then " + number_a);
+                break;
+            case 0:
+                alert("Numbers are equal.");
+                break;
+
+        }
+
+        //svaka funkcija treba da ima 1 odgovornost sto ovdje nije primjer
+        function compare(a, b){  //funkcija compare pored poredjenja ima i emitovanje poruka za krajnjeg korisnika tj,. ima 2 odgovornosti
+             number_a = parseInt(a);
+             number_b = parseInt(b);
+             if (number_a > number_b) {    //na kraju ako bih stavio  = pored znaka vece zadnji dio koda ili testCompare bih ispisao failed, jer to nije moguce
+                // alert("Number " + number_a + " is greater then " + number_b);  OVO JE PRVOBINO STANJE I MORALI SMO GA IZMIJENITI
+                        return 1;
+              } else if (number_b > number_a){  ///ovo smo dodali naknadno da bih rijesili problem kroz debaging
+                //alert("Number " + number_b + " is greater then " + number_a);  OVO JE PRVOBINO STANJE I MORALI SMO GA IZMIJENITI
+                     return -1;
+              } else {
+                //alert("Number " + number_b + " is greater then " + number_a); //number_a kada bi postavio number c prijavit ce sintaksu gresku
+                //kod iznad je bio prvipostojeci
+                //alert("Numbers are equal.");  OVO JE PRVOBINO STANJE I MORALI SMO GA IZMIJENITI
+                     return 0;
+                }
+            }
+
+        //broj 5 veci od broja 15, skripta radi al ne emituje ono sto ocekujemo i to je logicka greska
+        //u 18 lekciji kroz alet smo testirali RUCNO TESTIRANJE-BLACK BOX bez poznavanja logike, samo koristimo leemente koji su dostupni i krajnjim korisnicima
+        //AUTOMATIZOVANO TESTIRANJE-napisem skriptu da testira drugu skriptu...pristup je bolji al nije idealan...
+        //na ovaj nacin se obavlja FUNKCIJA COMPARE OBAVLJA PROG. LOGIKU, a CIJELINA VAR PRIHVATA VRIJEDNOST KORISNIKA
+        //I SWITCH CJELINA DA EMITUJE PORUKE, ISTI REZULTAT KAO U VJEZBI 18 nazvanu logicka greska
+
+
+        //nako uspjesnog automatiziranof testiranja pisemo funkciju za provjru compare ili testiranja 
+        function testCompare(){
+            let fail = false
+            if(compare(22, 11) !== 1) { fail = true;}
+            if(compare(11, 22) !== -1) { fail = true;}
+            if(compare(5, 5) !== 0) { fail = true;}
+            if(compare(-1, 45) !== -1) { fail = true;}
+
+            if(fail){
+                console.log("test faild!");
+
+            } else {
+                console.log("uspjesno")
+            }
+
+        }
+    </script>
+</body>
+
+</html>

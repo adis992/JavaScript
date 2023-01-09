@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>visedimenzionalni nizovi</title>
+</head>
+    <body>
+        <script>
+           let users = [];
+           users[0] = [1, "John", "okodfo33", "john@gmail.com"]
+           users[1] = [2, "pero", "ok2342fodfo33", "john@gmail.com"]
+           users[2] = [3, "nismabitan", "asdaa34", "john@gmail.com"]
+           users[3] = [4, "derpe", "okodasfo33", "john@gmail.com"]
+           
+           for (let i = 0; i < users.length; i++)  ///ako koristimo ovu petlju bez donje i kucamo console log ispisat ce samo 2 parametra npr bbroj 0 i ako smo naveli ime john i sve do kraja
+            {
+                for (let j=0; j<users[i].length; j++){//ovu petlju koristimo da ispisemo sve jednodimenzionalne nizove npr  1, "John", "okodfo33", "john@gmail.com"
+                    console.log(users[i][j])
+                }
+            }
+        </script>
+    </body>
+</html>

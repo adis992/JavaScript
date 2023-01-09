@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let map = new Map ([   //na ovaj nacin smo kreirali map objekat
+            ['id', 1],
+            ['username', 'maid'],
+            ['password', 'maid123'],
+            ['email', 'maid@maid.com'],
+        ]);
+
+        /*  let map = new Map ();   isti stvar na drugi nacin
+            map.set ("id", 1) */
+        for(let[key, value]of map.entries ){  //entries ako ne napisemo on automatski poziva ovu funkciju
+            //ako zelio prikazati samo kljuceve kucamo map.keys i u konzoli smao key isto i naziv promjenjive u key,,,,ako zelimo value samo izmijenimo sve troje
+            console.log(key + ": " + value);
+        }
+        //console.log(map.get('username')); //ispisat ce maid, ako bi koristio id ispisao bi 1
+        // console.log(map.size)       broj elemenata u objektu
+        // console.log(map.has('username')) da li postoji rijec username ako postoji biti ce TRUE ako ne postoji FALSE
+        //map.delete('username')  obrisat cemo kompletan niz username i vrijenost
+        
+  </script>
+</body>
+</html>

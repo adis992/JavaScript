@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <style>
+      #kalkulator-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      #kalkulator-buttons {
+        display: flex;
+        justify-content: center;
+      }
+    
+      #kalkulator input {
+        width: 150px;
+        margin: 5px;
+      }
+    
+      #kalkulator button {
+        width: 170px;
+        margin: 5px;
+      }
+      #result {
+        text-align: center;
+        font-size: medium;
+        background-color: brown;
+      }
+    </style>
+    
+</head>
+<body>
+  <div id="kalkulator-container">
+    <form id="kalkulator">
+      <input type="number" id="br1" placeholder="Prvi broj">
+      <input type="text" id="operator" placeholder="Operator">
+      <input type="number" id="br2" placeholder="Drugi broj">
+      <div id="result"></div>
+      <div id="kalkulator-buttons">
+        <button type="submit">Izračunaj</button>
+        <button type="reset" id="reset-button">Reset</button>
+      </div>
+    </form>
+  </div>
+  
+  <script>
+    // Izaberi formu
+    const kalkulator = document.querySelector("#kalkulator");
+  
+    // Dodaj događaj slušača za predaju
+    kalkulator.addEventListener("submit", function(event) {
+      // Spriječi da se forma podnese
+      event.preventDefault();
+  
+      // Dohvati vrijednosti ulaza
+      const br1 = document.querySelector("#br1").value;
+      const operator = document.querySelector("#operator").value;
+      const br2 = document.querySelector("#br2").value;
+  
+      // Pretvori ulaze u brojeve
+      const n1 = Number(br1);
+      const n2 = Number(br2);
+  
+      // Inicijaliziraj varijablu za rezultat
+      let rezultat;
+  
+      // Izvrši izračun na osnovu operatora
+      if (operator === "+") {
+        rezultat = n1 + n2;
+      } else if (operator === "-") {
+        rezultat = n1 - n2;
+      } else if (operator === "*") {
+        rezultat = n1 * n2;
+      } else if (operator === "/") {
+        rezultat = n1 / n2;
+      } else {
+        rezultat = "Nevažeći operator";
+      }
+  
+      // Prikaži rezultat
+      document.querySelector("#result").textContent = rezultat;
+    });
+  </script>
+  
+
+</body>
+</html>

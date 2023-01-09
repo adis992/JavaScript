@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+    <body>
+        <script>
+            
+            let cars = ["ford", "audi", "acura" ]
+            cars.forEach (writeCar);   //metoda
+            function writeCar(item, index, array){  //funkcija prihvata jedan parametar ITEM, ova fukcija moze da proslijedi foreach metodi moze da prihvati 2 parametra index i niz kroz koji se prolazi
+                console.log (index + ": " + item);
+            }
+           //na ovaj nacin dobijamo vrijednost indexa npr 0: ford i ostale
+        </script>
+    </body>
+</html>

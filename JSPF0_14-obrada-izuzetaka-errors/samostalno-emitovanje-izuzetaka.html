@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       // throw "This is error 666";
+        function divide (a, b) {
+            if (b ==0) { 
+                throw Error ("Dijeljenje sa 0 nije dozvoljeno");
+            }
+            return a / b;
+         }
+
+         //divide (5, 0);  //kako bi smo rijesili ovaj problem odnosno htrow error massage moramo dodati divide vrijednosti u funkciju try, ovo cu komentirati i ispod napisati ostatak funkcije
+         try {
+            divide (5, 0);
+         } catch(err){    //obrada trenutnog izuzetka do kojeg moze doci
+            console.log ("Error name:" + err.name)            //logika za ispis ovih poruka
+            console.log ("Error massage:" + err.massage)        //logika za ispis ovih poruka
+          }  
+
+          //ako bi zeljeli da ispisemo i name i massge mozemo i na ovaj nacin 
+
+
+          /*
+          function divide (a, b) {
+            if (b ==0) { 
+                var e = new Error ("Dijeljenje sa 0 nije dozvoljeno");
+                e.name = "Invalid division"
+                throw e;
+            } else if (b > 1000) {
+                    throw RangeError ("Divider cant be greater then 1000");   //rangeerror korsiti se za podatke iznad dozvoljenog opsega a mozemo korisiti i samo throw i u viticastim zagradama postaviti name "" i isto massege vrijednos ""
+                }
+            return a / b;
+         }
+
+         //divide (5, 0);  //kako bi smo rijesili ovaj problem odnosno htrow error massage moramo dodati divide vrijednosti u funkciju try, ovo cu komentirati i ispod napisati ostatak funkcije
+         try {
+            divide (5, 0);
+         } catch(err){    //obrada trenutnog izuzetka do kojeg moze doci
+            console.log ("Error name:" + err.name)            //logika za ispis ovih poruka
+            console.log ("Error massage:" + err.massage)        //logika za ispis ovih poruka
+          }  
+          */
+    </script>
+</body>
+</html>

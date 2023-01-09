@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uslovna izvrsavanja</title>
+</head>
+<body>
+    <script>
+        var speed = 90;       ///po ovoj vrijednosti ispunjavamo 2 bloka po uslovima, ali kada imamo takav primjer uvijek ce se izvrsiti SAMO JEDAN od uslova i to onaj prvi
+        if (speed <10) {
+            console.log ("Too slow...") 
+        } else if (speed <=80){
+            console.log ("Regular speed")
+        }  else if (speed < 100) {
+            console.log ("to fast ")
+        } else {   //na else naredbi nikada ne stoje zagrade
+            console.log ("Incorrect speed...")    
+        }
+        
+
+        //PRILIKOM GRADNJE OVAKVE KONSTRUKCIJE MOGUCE JE KREIRATI 1 IF 1 ELSE I vise else if naredbi
+        //USLOVI MOGU DA POSTOJE NA IF I ELSE IF a nikada na ELSE bloku
+        
+
+
+        //ako je uslov ispunjen kao u primjeru iznad naredba ce se izvrsiti a kada bih stavili spped na 11 ne bi se nista desio jer uslov nije ispunjen odnosno ne bi bio isp.
+        // u naredbi if u zagradi ide uslov moze kao u primjeru a isto tako taj uslov mozemo staviti sa true ili false 
+        //
+    </script>
+</body>
+</html>

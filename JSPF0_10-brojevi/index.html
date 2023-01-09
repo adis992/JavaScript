@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Brojevi</title>
+</head>
+<body>
+    <script>
+
+        // var x = 10;
+        //  var y = -338;
+        //  var z = 0;
+        //def cijelih brojeva
+
+        //var x= 56.10;  def decimalnih brojeva
+        
+
+        //sljedeci primjer je rijec o exponencijalnom obliku
+        //var x= 154e5;
+        //console.log(x);
+
+        //sljedeci primjer je u hexa decimalno obliku
+        // var x = 0xff;
+        // console.log(x);
+        //dobit cemo broj 255
+
+        //sljedecibroj je oktalni 
+        //var x = 0312;
+
+        //U JS IMAM TRI NUMERICKA LITERALA
+        //nan nota a number-nije validan broj
+        //primjer
+        //var x= 0 /0;
+        //da dobijemo infiniti ili minus inf. dijelimo npr 5/0 vrijednos u beskonacnosti bio + ili -
+
+
+        //var x= 999999999999999999;
+        //console.log()
+        //dolazi dop nepredvijednog zaokruzivanja brojeva preko 15 cifara i nakon toga koristimo BIGINIT 
+        //ovakav tip dodajemo n uz brojeve na kraju literala
+
+        /*var x = 0.1;
+        var y = 0.2;
+        var 2 = x + y;  //(x *10 + y *10) /10;
+        console.log (z);*/
+        //dobijamo rezultat 0.30000000000004 razlog je nacin na koji se decimalni br pojavljuju u binarnom obliku
+        //rijesenje za ovakav slucaj  pretvaramo vrijednosti (x*10+ y*10) /10
+        //tek tada dobijamo pravi rezultat 0.3
+
+        //console.log(Math.PI); //math je spremljen iznos vrijednosti pi 3.14nnn
+        // mat ima 3 metode za zaokruzivanje vrijednosti
+        // primjeri
+
+
+        /* ROUND metoda
+        var x= Math.round (5.4);
+        console.log(x);   //ROUND metoda ce zaokruziti na blizi cijeli broj sto je u ovom slucaju 5
+        
+        */
+        //  metoda  CEIL
+        /*
+        var x= Math.ceil (5.2);   //zaokruzuje na prvi veci cijeli broj ovaj rez je 6
+        console.log(x);  */
+        // metoda FLOOR
+       /*
+        var x= Math.floor (5.8);  //zaokruzuje na prvi manji cijeli broj to je rezultat na 5
+        console.log(x);  */
+
+        //METOTE ZA STEPOVANJE I KORJENOVANJE
+
+        //prvo idemo korijenovanje
+        //var x = Math.sqrt (16);
+        //console.log (x);
+        //dobijemo 4
+
+
+        //druga metoda je stepovanje i to ima 2 opcije
+        //var x = Math.pow (2, 2);   ///////prvi parametar osnova kojom se stepenuje drugim parametrom kao da smo napisali 2 na kvadrat
+        //console.log (x);
+        
+        
+        // ABSOLUTNA VRIJEDNOST
+        //var x = Math.abs (-200);  dobijamo vrijednost  200 tj - vijednost ide u pozitivnu a kad navedemo pozitivnu nema razlike
+        //console.log (x);
+
+        // sign ()  sajn metoda  emituje vrijednost 1 kad je pozitivan broj a kad je negativan ide -1 i emituje vr. 0 ako je broj 0 
+        //var x = Math.abs (-200);  dobijamo vrijednost  200 tj - 
+        //console.log (x);
+
+
+        //OSOBINE NUMERICKIH OMOTACA U JS
+        // number objekat
+        //var x = Number.MAX_SAFE_INTEGER;   maximalni bezbijedni broj number tipa
+        //console.log (x);
+
+        // zaokruzivanje decimale na toliko brojeva koliko postavimo u toFixed metodi i automatski js to obavi    
+        //var x = 123.5512;
+        //console.log(x.toFixed(2));
+
+        //METODE KOJE MOGUCE KORISITI ZA PARSIRANJE BROJEVA ZA KONVERZIJU TEXTA U BROJ
+
+        // parseInt("hello", 8)   pretvara text u broj  s tim da drugi parametar moze ispisati u decimalnom, hexadecimalnom i ostalim tipovimabrojeva
+        parseFloat("3.14")  //prihvata samo 1 parametar i uvijek je decimalni brojni sistem
+
+    </script>
+</body>
+</html>
